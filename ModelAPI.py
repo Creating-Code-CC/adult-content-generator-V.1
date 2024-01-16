@@ -8,7 +8,7 @@ from urllib.request import urlopen
 
 textToImage = "https://stablediffusionapi.com/api/v3/text2img"
 ImageToImage = "https://stablediffusionapi.com/api/v3/img2img"
-InPainting = "https://stablediffusionapi.com/api/v3/img2img"
+InPainting = "https://stablediffusionapi.com/api/v3/inpaint"
 
 payload = json.dumps({
     "key": "",
