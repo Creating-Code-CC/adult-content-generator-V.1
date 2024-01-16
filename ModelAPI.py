@@ -6,8 +6,9 @@ from io import BytesIO
 import urllib.request 
 from urllib.request import urlopen
 
-url = "https://stablediffusionapi.com/api/v3/text2img"
-url2 = "https://stablediffusionapi.com/api/v3/img2img"
+textToImage = "https://stablediffusionapi.com/api/v3/text2img"
+ImageToImage = "https://stablediffusionapi.com/api/v3/img2img"
+InPainting = "https://stablediffusionapi.com/api/v3/img2img"
 
 payload = json.dumps({
     "key": "",
@@ -33,7 +34,7 @@ headers = {
     'Content-Type': 'application/json',
 }
 
-response = requests.request("POST", url, headers=headers, data=payload)
+response = requests.request("POST", textToImage, headers=headers, data=payload)
 
 obj = json.loads(response.text)
 
@@ -43,14 +44,14 @@ strout = str(output)
 
 str = strout[2:]
 str2 = str[:-2]
-url = str2
+outPut_url = str2
 
 opener = urllib.request.build_opener()
 opener.addheaders = [('User-Agent', 'MyApp/1.0')]
 urllib.request.install_opener(opener)
 
 
-urllib.request.urlretrieve(url, "pornstar.png") 
+urllib.request.urlretrieve(outPut_url, "pornstar.png") 
 
 img = Image.open(r"pornstar.png") 
 img.show()
