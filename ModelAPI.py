@@ -5,12 +5,13 @@ from PIL import Image
 from io import BytesIO
 import urllib.request 
 from urllib.request import urlopen
+import creds
 
 url = "https://stablediffusionapi.com/api/v3/text2img"
 url2 = "https://stablediffusionapi.com/api/v3/img2img"
 
 payload = json.dumps({
-    "key": "",
+    "key": creds.API_KEY,
     "prompt": "ultra realistic close up portrait ((beautiful pale cyberpunk female with heavy black eyeliner))",
     "negative_prompt": None,
     "width": "512",
