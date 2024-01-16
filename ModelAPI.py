@@ -10,7 +10,7 @@ url = "https://stablediffusionapi.com/api/v3/text2img"
 url2 = "https://stablediffusionapi.com/api/v3/img2img"
 
 payload = json.dumps({
-    "key": "qjSFrKBFVbIm7OVeuxyu4IjLq9Zk9SdJ2bQYnL5G5qMEj5xHqRPBdko67HRk",
+    "key": "",
     "prompt": "ultra realistic close up portrait ((beautiful pale cyberpunk female with heavy black eyeliner))",
     "negative_prompt": None,
     "width": "512",
